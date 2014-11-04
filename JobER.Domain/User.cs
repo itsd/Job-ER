@@ -6,5 +6,12 @@ using System.Threading.Tasks;
 
 namespace JobER.Domain {
     public class User {
+        public int ID { get; set; }
     }
+
+    public class Company : User { 
+    
+    }
+
+
 }
