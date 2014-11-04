@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JobER.Domain.Interfaces.Repositories {
-    public interface IUserRepository {
-        User Fetch(int id);
+    public interface IJobRepository {
+        Job Fetch(int id);
     }
 }

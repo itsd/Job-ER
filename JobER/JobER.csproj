@@ -40,6 +40,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.3\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.Entity.6.9.3\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -229,6 +237,27 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Web.Connections.config" />
+    <Content Include="Web.Connections.Debug.config">
+      <DependentUpon>Web.Connections.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Connections.Release.config">
+      <DependentUpon>Web.Connections.config</DependentUpon>
+    </Content>
+    <Content Include="Web.jober.config" />
+    <Content Include="Web.jober.Debug.config">
+      <DependentUpon>Web.jober.config</DependentUpon>
+    </Content>
+    <Content Include="Web.jober.Release.config">
+      <DependentUpon>Web.jober.config</DependentUpon>
+    </Content>
+    <None Include="Web.Settings.config" />
+    <None Include="Web.Settings.Debug.config">
+      <DependentUpon>Web.Settings.config</DependentUpon>
+    </None>
+    <None Include="Web.Settings.Release.config">
+      <DependentUpon>Web.Settings.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JobER.Domain.Interfaces.Repositories {
-    public interface IUserRepository {
-        User Fetch(int id);
+namespace JobER.Services {
+    public class UserService {
     }
 }
