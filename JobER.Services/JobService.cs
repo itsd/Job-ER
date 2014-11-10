@@ -18,5 +18,9 @@ namespace JobER.Services {
         public Job Fetch(int id) {
             return _jobRepository.Fetch(id);
         }
+
+        public IEnumerable<Job> GetJobsByCategory(int categoryId) {
+            return _jobRepository.GetJobsByCategory(categoryId);
+        }
     }
 }

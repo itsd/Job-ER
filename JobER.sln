@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobER.Services", "JobER.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobER.Repositories", "JobER.Repositories\JobER.Repositories.csproj", "{7B70AC10-959F-43F7-9052-ED22C50CEA7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobER.Configuration", "JobER.Configuration\JobER.Configuration.csproj", "{83FCB636-A9BC-47FA-8AD9-ADD0FB195C9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7B70AC10-959F-43F7-9052-ED22C50CEA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B70AC10-959F-43F7-9052-ED22C50CEA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B70AC10-959F-43F7-9052-ED22C50CEA7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83FCB636-A9BC-47FA-8AD9-ADD0FB195C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FCB636-A9BC-47FA-8AD9-ADD0FB195C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FCB636-A9BC-47FA-8AD9-ADD0FB195C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FCB636-A9BC-47FA-8AD9-ADD0FB195C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,5 +49,6 @@ Global
 		{B3EAC412-4697-4C77-AC2C-B9367CAA29EC} = {4827AC61-66CC-4BED-9B2A-2D83C6923594}
 		{2C07B817-DA11-41C3-B53E-87550757BD49} = {4827AC61-66CC-4BED-9B2A-2D83C6923594}
 		{7B70AC10-959F-43F7-9052-ED22C50CEA7A} = {4827AC61-66CC-4BED-9B2A-2D83C6923594}
+		{83FCB636-A9BC-47FA-8AD9-ADD0FB195C9C} = {4827AC61-66CC-4BED-9B2A-2D83C6923594}
 	EndGlobalSection
 EndGlobal

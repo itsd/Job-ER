@@ -17,5 +17,9 @@ namespace JobER.Repositories.Context {
         public Job Fetch(int id) {
             return _entityContext.Jobs.FirstOrDefault(x => x.ID == id);
         }
+
+        public IEnumerable<Job> GetJobsByCategory(int categoryId) {
+            return _entityContext.Jobs.Where(x => x.Category.ID == categoryId);
+        }
     }
 }

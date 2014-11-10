@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JobER.Domain.Interfaces.Repositories {
-    public interface IJobRepository {
-        Job Fetch(int id);
-        IEnumerable<Job> GetJobsByCategory(int categoryId);
+    public interface ICategoryRepository {
+        Category Fetch(int id);
+        IEnumerable<Category> GetCategories();
+
     }
 }

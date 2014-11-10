@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JobER.Domain {
-    public class Job {
+    public class Category {
         public int ID { get; set; }
-        public Category Category { get; set; }
+        public string Name { get; set; }
+        public ICollection<Job> Jobs { get; set; }
     }
 }
