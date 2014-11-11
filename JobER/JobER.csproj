@@ -244,12 +244,12 @@
     <Content Include="Web.Connections.Release.config">
       <DependentUpon>Web.Connections.config</DependentUpon>
     </Content>
-    <Content Include="Web.jober.config" />
-    <Content Include="Web.jober.Debug.config">
-      <DependentUpon>Web.jober.config</DependentUpon>
+    <Content Include="Web.Jober.config" />
+    <Content Include="Web.Jober.Debug.config">
+      <DependentUpon>Web.Jober.config</DependentUpon>
     </Content>
-    <Content Include="Web.jober.Release.config">
-      <DependentUpon>Web.jober.config</DependentUpon>
+    <Content Include="Web.Jober.Release.config">
+      <DependentUpon>Web.Jober.config</DependentUpon>
     </Content>
     <None Include="Web.Settings.config" />
     <None Include="Web.Settings.Debug.config">
