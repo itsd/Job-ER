@@ -1,10 +1,10 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using JobER.Repositories.Context;
 using JobER.Domain.Interfaces.Services;
 using JobER.Services;
 using JobER.Repositories;
-using JobER.Repositories.Context;
 
 namespace JobER.API.App_Start {
     /// <summary>

@@ -44,6 +44,10 @@
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Home.Shared\Home.Shared.csproj">
+      <Project>{1cf5acbe-fe03-4164-a54f-65e339fda070}</Project>
+      <Name>Home.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JobER.Domain\JobER.Domain.csproj">
       <Project>{b3eac412-4697-4c77-ac2c-b9367caa29ec}</Project>
       <Name>JobER.Domain</Name>

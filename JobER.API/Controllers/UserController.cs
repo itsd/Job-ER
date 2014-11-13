@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Home.Shared;
 using JobER.API.Models.Account;
+using JobER.Domain;
 
 namespace JobER.API.Controllers {
 
@@ -15,13 +16,19 @@ namespace JobER.API.Controllers {
         private IUserService _userService;
 
         public UserController(IUserService userService) {
-            //_userService = userService.ScreamIfNull("userService");
+            _userService = userService.ScreamIfNull("userService");
         }
 
         [Route("login")]
         public SigninModel Get_Login() {
 
-            //_userService.Login("", "");
+            _userService.Add(new User {
+                Username = "Admin",
+                Password = "Admin",
+                Firstname = "Admin",
+                Lastname = "Admin",
+                Email = "Admin@jober.com"
+            });
 
             return new SigninModel {
                 Username = "username",

@@ -18,5 +18,14 @@ namespace JobER.Repositories {
         public User Fetch(int id) {
             return _entityContext.Users.FirstOrDefault(x => x.ID == id);
         }
+
+        public void Add(User user) {
+            _entityContext.Users.Add(user);
+            _entityContext.Commit();
+        }
+
+        public User Get(int id) {
+            return _entityContext.Users.FirstOrDefault(x => x.ID == id);
+        }
     }
 }

@@ -35,7 +35,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,6 +67,35 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\UserTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Home.Entity\Home.Entity.csproj">
+      <Project>{9894f23b-4f6b-478d-9170-85aa048bdac6}</Project>
+      <Name>Home.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Home.Shared\Home.Shared.csproj">
+      <Project>{1cf5acbe-fe03-4164-a54f-65e339fda070}</Project>
+      <Name>Home.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobER.Domain\JobER.Domain.csproj">
+      <Project>{b3eac412-4697-4c77-ac2c-b9367caa29ec}</Project>
+      <Name>JobER.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobER.Repositories\JobER.Repositories.csproj">
+      <Project>{7b70ac10-959f-43f7-9052-ed22c50cea7a}</Project>
+      <Name>JobER.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobER.Services\JobER.Services.csproj">
+      <Project>{2c07b817-da11-41c3-b53e-87550757bd49}</Project>
+      <Name>JobER.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
