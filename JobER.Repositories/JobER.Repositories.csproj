@@ -61,6 +61,14 @@
     <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Home.Entity\Home.Entity.csproj">
+      <Project>{9894f23b-4f6b-478d-9170-85aa048bdac6}</Project>
+      <Name>Home.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Home.Shared\Home.Shared.csproj">
+      <Project>{1cf5acbe-fe03-4164-a54f-65e339fda070}</Project>
+      <Name>Home.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JobER.Domain\JobER.Domain.csproj">
       <Project>{b3eac412-4697-4c77-ac2c-b9367caa29ec}</Project>
       <Name>JobER.Domain</Name>

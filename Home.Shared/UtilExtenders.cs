@@ -10,5 +10,10 @@ namespace Home.Shared {
             if (obj == null) throw new ArgumentNullException(name ?? typeof(T).Name);
             return obj;
         }
+
+        public static IEnumerable<T> ForEach<T>(this IEnumerable<T> list, Action<T> action) {
+            foreach (T x in list) action(x);
+            return list;
+        }
     }
 }
