@@ -8,6 +8,6 @@ namespace JobER.Domain.Interfaces.Services {
     public interface IUserService {
         void Login(string username, string password);
         void Add(User user);
-        User Get(int id);
+        User Fetch(int id);
     }
 }

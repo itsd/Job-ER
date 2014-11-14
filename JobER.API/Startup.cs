@@ -6,13 +6,10 @@ using Owin;
 
 [assembly: OwinStartup(typeof(JobER.API.Startup))]
 
-namespace JobER.API
-{
-    public partial class Startup
-    {
-        public void Configuration(IAppBuilder app)
-        {
-            ConfigureAuth(app);
+namespace JobER.API {
+    public partial class Startup {
+        public void Configuration(IAppBuilder app) {
+
         }
     }
 }

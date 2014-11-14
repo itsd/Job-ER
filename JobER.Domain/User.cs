@@ -14,6 +14,7 @@ namespace JobER.Domain {
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Email { get; set; }
+        public bool IsDeleted { get; set; }
     }
 
     public class Company : User {

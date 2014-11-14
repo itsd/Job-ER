@@ -25,8 +25,8 @@ namespace JobER.Services {
             _userRepository.Add(user);
         }
 
-        public User Get(int id) {
-            return _userRepository.Get(id);
+        public User Fetch(int id) {
+            return _userRepository.Fetch(id);
         }
     }
 }

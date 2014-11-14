@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JobER.Domain.Interfaces.Repositories {
     public interface IUserRepository {
         User Fetch(int id);
+        User Fetch(string username, string password);
         void Add(User user);
-        User Get(int id);
     }
 }

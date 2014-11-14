@@ -19,13 +19,13 @@ namespace JobER.Repositories {
             return _entityContext.Users.FirstOrDefault(x => x.ID == id);
         }
 
+        public User Fetch(string username, string password) {
+            return _entityContext.Users.FirstOrDefault(x => x.Username == username && x.Password == password && !x.IsDeleted);
+        }
+
         public void Add(User user) {
             _entityContext.Users.Add(user);
             _entityContext.Commit();
-        }
-
-        public User Get(int id) {
-            return _entityContext.Users.FirstOrDefault(x => x.ID == id);
         }
     }
 }
