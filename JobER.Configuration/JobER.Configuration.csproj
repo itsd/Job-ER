@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationConfig.cs" />
-    <Compile Include="JobERConfig.cs" />
-    <Compile Include="JobERConfigurationSection.cs" />
+    <Compile Include="CompanyConfigurationElement.cs" />
+    <Compile Include="JobErConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

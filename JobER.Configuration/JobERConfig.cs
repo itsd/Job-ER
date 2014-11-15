@@ -7,9 +7,9 @@ using Home.Configuration;
 using Home.Shared;
 
 namespace JobER.Configuration {
-    public class JobERConfig {
+    public class JobErConfig {
         private IConfigurationProvider _provider;
-        public JobERConfig(IConfigurationProvider provider) {
+        public JobErConfig(IConfigurationProvider provider) {
             _provider = provider.ScreamIfNull("provider");
         }
 

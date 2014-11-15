@@ -267,13 +267,6 @@
     <Content Include="Web.Connections.Release.config">
       <DependentUpon>Web.Connections.config</DependentUpon>
     </Content>
-    <Content Include="Web.Jober.config" />
-    <Content Include="Web.Jober.Debug.config">
-      <DependentUpon>Web.Jober.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Jober.Release.config">
-      <DependentUpon>Web.Jober.config</DependentUpon>
-    </Content>
     <None Include="Web.Settings.config" />
     <None Include="Web.Settings.Debug.config">
       <DependentUpon>Web.Settings.config</DependentUpon>

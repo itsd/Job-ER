@@ -304,12 +304,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <None Include="Web.Jober.config" />
-    <None Include="Web.Jober.Debug.config">
-      <DependentUpon>Web.Jober.config</DependentUpon>
+    <None Include="Web.Application.config" />
+    <None Include="Web.Application.Debug.config">
+      <DependentUpon>Web.Application.config</DependentUpon>
     </None>
-    <None Include="Web.Jober.Release.config">
-      <DependentUpon>Web.Jober.config</DependentUpon>
+    <None Include="Web.Application.Release.config">
+      <DependentUpon>Web.Application.config</DependentUpon>
     </None>
     <None Include="Web.Connections.config" />
     <None Include="Web.Connections.Debug.config">
@@ -337,6 +337,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Home.Configuration\Home.Configuration.csproj">
+      <Project>{038fdf5f-456e-4184-85a9-578e41e4e713}</Project>
+      <Name>Home.Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Home.Entity\Home.Entity.csproj">
       <Project>{9894f23b-4f6b-478d-9170-85aa048bdac6}</Project>
       <Name>Home.Entity</Name>
@@ -344,6 +348,10 @@
     <ProjectReference Include="..\Home.Shared\Home.Shared.csproj">
       <Project>{1cf5acbe-fe03-4164-a54f-65e339fda070}</Project>
       <Name>Home.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobER.Configuration\JobER.Configuration.csproj">
+      <Project>{83fcb636-a9bc-47fa-8ad9-add0fb195c9c}</Project>
+      <Name>JobER.Configuration</Name>
     </ProjectReference>
     <ProjectReference Include="..\JobER.Domain\JobER.Domain.csproj">
       <Project>{b3eac412-4697-4c77-ac2c-b9367caa29ec}</Project>

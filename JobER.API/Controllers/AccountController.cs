@@ -10,6 +10,7 @@ using System.Web.Http;
 using Home.Shared;
 using JobER.API.Models;
 using JobER.Domain;
+using JobER.Configuration;
 
 namespace JobER.API.Controllers {
     [RoutePrefix("account")]
@@ -17,10 +18,12 @@ namespace JobER.API.Controllers {
 
         private ISessionService _sessionService;
         private IUserService _userService;
+        private JobErConfig _joberConfig;
 
-        public AccountController(ISessionService sessionService, IUserService userService) {
+        public AccountController(ISessionService sessionService, IUserService userService, JobErConfig joberConfig) {
             _sessionService = sessionService.ScreamIfNull("sessionService");
             _userService = userService.ScreamIfNull("userService");
+            _joberConfig = joberConfig.ScreamIfNull("joberConfig");
         }
 
         [Route("signup"), HttpPost]
@@ -54,5 +57,9 @@ namespace JobER.API.Controllers {
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
+        [Route("test"), HttpGet]
+        public void Test() {
+            string x = _joberConfig.Application.Company.Username;
+        }
     }
 }

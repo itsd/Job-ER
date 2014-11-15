@@ -8,6 +8,7 @@ using System.Web.Http;
 using Home.Shared;
 using JobER.API.Models.Account;
 using JobER.Domain;
+using JobER.Configuration;
 
 namespace JobER.API.Controllers {
 
@@ -15,9 +16,11 @@ namespace JobER.API.Controllers {
     public class UserController : ApiController {
 
         private IUserService _userService;
+        private JobErConfig _joberConfig;
 
-        public UserController(IUserService userService) {
+        public UserController(IUserService userService, JobErConfig joberConfig) {
             _userService = userService.ScreamIfNull("userService");
+            _joberConfig = joberConfig.ScreamIfNull("joberConfig");
         }
     }
 }
