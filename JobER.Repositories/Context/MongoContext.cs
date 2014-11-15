@@ -42,16 +42,11 @@ namespace JobER.Repositories.Context {
                 }
             }
 
-            var mappings = (
-                from type in typeof(MongoContext).Assembly.GetTypes()
-                let mapInfo = type.GetMethod("Map", BindingFlags.Static | BindingFlags.NonPublic)
-                where mapInfo != null
-                select mapInfo
-            );
+            typeof(MongoContext).Assembly.GetTypes()
+                    .Where(x => (x.Namespace ?? string.Empty).EndsWith("Mappings"))
+                    .ToList().ForEach(x => x.GetMethod("Initialize", BindingFlags.Static | BindingFlags.NonPublic)
+                    .Invoke(null, new object[0]));
 
-            foreach (var mapping in mappings) {
-                mapping.Invoke(null, new object[0]);
-            }
         }
 
         public MongoContext() {

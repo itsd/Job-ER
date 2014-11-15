@@ -33,9 +33,10 @@ namespace JobER.API.App_Start {
         public static void RegisterTypes(IUnityContainer container) {
             container.RegisterTypes(
                 AllClasses.FromAssemblies(
-                    typeof(IUserService).Assembly,
-                    typeof(UserService).Assembly,
-                    typeof(UserRepository).Assembly
+                    typeof(ISessionService).Assembly,
+                    typeof(SessionService).Assembly,
+                    typeof(UserRepository).Assembly,
+                    typeof(SessionRepository).Assembly
                 ),
                 WithMappings.FromMatchingInterface,
                 WithName.Default,
@@ -44,6 +45,11 @@ namespace JobER.API.App_Start {
 
             container.RegisterType(
                 typeof(EntityContext),
+                new PerRequestLifetimeManager()
+            );
+
+            container.RegisterType(
+                typeof(MongoContext),
                 new PerRequestLifetimeManager()
             );
         }

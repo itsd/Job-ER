@@ -65,6 +65,7 @@
     <Compile Include="Context\EntityContext.cs" />
     <Compile Include="Context\MongoContext.cs" />
     <Compile Include="JobRespository.cs" />
+    <Compile Include="Mappings\SessionMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionRepository.cs" />
     <Compile Include="UserRepository.cs" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -9,9 +10,10 @@ using System.Threading.Tasks;
 namespace JobER.Domain {
     [Serializable]
     public class JobErSession : IPrincipal {
+        [Key]
+        public string Token { get; set; }
         public int UserID { get; set; }
         public string Username { get; set; }
-        public string Token { get; set; }
         public static JobErSession Current {
             get { return Thread.CurrentPrincipal as JobErSession; }
         }
@@ -25,8 +27,8 @@ namespace JobER.Domain {
         }
 
         public IIdentity Identity {
-            get { throw new NotImplementedException(); }
-        }
+            get { return _identity ?? (_identity = new JobErIdentity { IsAuthenticated = true, Name = Username }); }
+        }private IIdentity _identity;
 
         public bool IsInRole(string role) {
             throw new NotImplementedException();
@@ -40,12 +42,8 @@ namespace JobER.Domain {
             get { throw new NotImplementedException(); }
         }
 
-        public bool IsAuthenticated {
-            get { throw new NotImplementedException(); }
-        }
+        public bool IsAuthenticated { get; internal set; }
 
-        public string Name {
-            get { throw new NotImplementedException(); }
-        }
+        public string Name { get; internal set; }
     }
 }

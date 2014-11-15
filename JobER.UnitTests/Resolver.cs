@@ -19,20 +19,26 @@ namespace JobER.UnitTests {
             _container = new UnityContainer();
 
             _container.RegisterTypes(
-               AllClasses.FromAssemblies(
-                   typeof(IUserService).Assembly,
-                   typeof(UserService).Assembly,
-                   typeof(UserRepository).Assembly
-               ),
-               WithMappings.FromMatchingInterface,
-               WithName.Default,
-               x => new TransientLifetimeManager()
-           );
+                  AllClasses.FromAssemblies(
+                      typeof(ISessionService).Assembly,
+                      typeof(SessionService).Assembly,
+                      typeof(UserRepository).Assembly,
+                      typeof(SessionRepository).Assembly
+                  ),
+                  WithMappings.FromMatchingInterface,
+                  WithName.Default,
+                  x => new TransientLifetimeManager()
+              );
 
             _container.RegisterType(
                 typeof(EntityContext),
                 new ContainerControlledLifetimeManager()
             );
+
+            _container.RegisterType(
+               typeof(MongoContext),
+               new ContainerControlledLifetimeManager()
+           );
         }
 
         public static T GetService<T>() {
