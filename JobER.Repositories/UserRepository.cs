@@ -23,9 +23,17 @@ namespace JobER.Repositories {
             return _entityContext.Users.FirstOrDefault(x => x.Username == username && x.Password == password && !x.IsDeleted);
         }
 
-        public void Add(User user) {
+        public void Save(User user) {
             _entityContext.Users.Add(user);
             _entityContext.Commit();
+        }
+
+        public bool EmailIsUnique(int userId, string email) {
+            return !_entityContext.Users.Any(x => x.ID != userId && x.Email == email);
+        }
+
+        public bool UsernameIsUnique(int userId, string username) {
+            return !_entityContext.Users.Any(x => x.ID != userId && x.Username == username);
         }
     }
 }

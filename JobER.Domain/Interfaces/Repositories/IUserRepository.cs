@@ -8,6 +8,8 @@ namespace JobER.Domain.Interfaces.Repositories {
     public interface IUserRepository {
         User Fetch(int id);
         User Fetch(string username, string password);
-        void Add(User user);
+        void Save(User user);
+        bool EmailIsUnique(int userId, string email);
+        bool UsernameIsUnique(int userId, string username);
     }
 }

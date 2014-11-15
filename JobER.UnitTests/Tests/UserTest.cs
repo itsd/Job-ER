@@ -13,11 +13,11 @@ namespace JobER.UnitTests.Tests {
 
         [TestMethod]
         public void Test_GetUser() {
-            //int userId = 1;
-            //var service = Resolver.GetService<IUserService>();
-            //User user = service.Get(userId);
+            int userId = 1;
+            var service = Resolver.GetService<IUserService>();
+            User user = service.Fetch(userId);
 
-            //Assert.AreEqual(user.ID, userId);
+            Assert.IsTrue(user != null && user.ID == userId);
         }
     }
 }

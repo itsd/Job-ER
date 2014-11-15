@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace JobER.Domain.Interfaces.Services {
     public interface IUserService {
-        void Login(string username, string password);
-        void Add(User user);
+        JobErSession Login(string username, string password);
+        void Save(User user);
         User Fetch(int id);
+        User Register(string username, string password, string firstname, string lastname, string email);
     }
 }

@@ -11,29 +11,13 @@ using JobER.Domain;
 
 namespace JobER.API.Controllers {
 
-    [RoutePrefix("api/User")]
+    [RoutePrefix("user")]
     public class UserController : ApiController {
+
         private IUserService _userService;
 
         public UserController(IUserService userService) {
             _userService = userService.ScreamIfNull("userService");
-        }
-
-        [Route("login")]
-        public SigninModel Get_Login() {
-
-            _userService.Add(new User {
-                Username = "Admin",
-                Password = "Admin",
-                Firstname = "Admin",
-                Lastname = "Admin",
-                Email = "Admin@jober.com"
-            });
-
-            return new SigninModel {
-                Username = "username",
-                Password = "password"
-            };
         }
     }
 }

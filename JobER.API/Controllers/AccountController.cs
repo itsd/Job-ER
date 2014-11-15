@@ -16,15 +16,27 @@ namespace JobER.API.Controllers {
     public class AccountController : ApiController {
 
         private ISessionService _sessionService;
+        private IUserService _userService;
 
-        public AccountController(ISessionService sessionService) {
+        public AccountController(ISessionService sessionService, IUserService userService) {
             _sessionService = sessionService.ScreamIfNull("sessionService");
+            _userService = userService.ScreamIfNull("userService");
         }
 
         [Route("signup"), HttpPost]
-        public UserSessionModel Signup() {
-            //TODO: Implement Signup Method
-            return new UserSessionModel { };
+        public UserSessionModel Signup(UserSignupModel model) {
+            try {
+                var user = _userService.Register(model.Username, model.Password, model.Firstname, model.Lastname, model.Email);
+                return _sessionService.Login(model.Username, model.Password);
+            } catch (DuplicateEmailException) {
+                throw new HttpResponseException(HttpStatusCode.NotAcceptable);
+            } catch (DuplicateUsernameException) {
+                throw new HttpResponseException(HttpStatusCode.Conflict);
+            } catch (InvalidEmailException) {
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            } catch (InvalidPasswordException) {
+                throw new HttpResponseException(HttpStatusCode.Forbidden);
+            }
         }
 
         [Route("login"), HttpPost]
@@ -41,5 +53,6 @@ namespace JobER.API.Controllers {
             _sessionService.Logout(JobErSession.Current.Token);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
+
     }
 }

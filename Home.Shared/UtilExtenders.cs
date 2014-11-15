@@ -21,5 +21,10 @@ namespace Home.Shared {
             UTF8Encoding encoding = new UTF8Encoding();
             return Convert.ToBase64String(MD5CryptoServiceProvider.Create().ComputeHash(encoding.GetBytes(clearText)));
         }
+
+        public static bool IsValidEmailAddress(this string email) {
+            //TODO: Implement is valid email method
+            return true;
+        }
     }
 }
