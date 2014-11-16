@@ -170,6 +170,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,7 +179,9 @@
     <Compile Include="Models\Account\LoginRequestModel.cs" />
     <Compile Include="Models\Account\SigninModel.cs" />
     <Compile Include="Models\Account\UserSignupModel.cs" />
+    <Compile Include="Models\Job\JobModel.cs" />
     <Compile Include="Models\UserSessionModel.cs" />
+    <Compile Include="Models\User\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -21,5 +21,13 @@ namespace JobER.Repositories.Context {
         public IEnumerable<Job> GetJobsByCategory(int categoryId) {
             return _entityContext.Jobs.Where(x => x.Category.ID == categoryId);
         }
+
+        public IEnumerable<Job> GetAll() {
+            return _entityContext.Jobs.Where(x => x.IsActive);
+        }
+
+        public IEnumerable<Job> GetJobsByCompany(int companyId) {
+            return _entityContext.Jobs.Where(x => x.IsActive && x.Company.ID == companyId);
+        }
     }
 }

@@ -9,6 +9,7 @@ using Home.Shared;
 using JobER.API.Models.Account;
 using JobER.Domain;
 using JobER.Configuration;
+using JobER.API.Models.User;
 
 namespace JobER.API.Controllers {
 
@@ -21,6 +22,11 @@ namespace JobER.API.Controllers {
         public UserController(IUserService userService, JobErConfig joberConfig) {
             _userService = userService.ScreamIfNull("userService");
             _joberConfig = joberConfig.ScreamIfNull("joberConfig");
+        }
+
+        [Route("profile"), HttpGet]
+        public UserModel Profile() {
+            return _userService.Fetch(JobErSession.Current.UserID);
         }
     }
 }

@@ -18,6 +18,7 @@ namespace JobER.Domain {
     }
 
     public class Company : User {
+        public string Name { get; set; }
         public ICollection<Job> Jobs { get; set; }
     }
 }

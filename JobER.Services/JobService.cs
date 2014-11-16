@@ -19,8 +19,21 @@ namespace JobER.Services {
             return _jobRepository.Fetch(id);
         }
 
+        public IEnumerable<Job> GetAll() {
+            return _jobRepository.GetAll().ToList();
+        }
+
+        public IEnumerable<Job> GetJobsByCompany(int companyId) {
+            return _jobRepository.GetJobsByCompany(companyId).ToList();
+        }
+
         public IEnumerable<Job> GetJobsByCategory(int categoryId) {
-            return _jobRepository.GetJobsByCategory(categoryId);
+            return _jobRepository.GetJobsByCategory(categoryId).ToList();
+        }
+
+        public void Save(Job job) {
+            //TODO: Implement Job save method
+            throw new NotImplementedException();
         }
     }
 }

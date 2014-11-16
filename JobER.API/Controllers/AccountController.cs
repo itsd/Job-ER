@@ -56,20 +56,5 @@ namespace JobER.API.Controllers {
             _sessionService.Logout(JobErSession.Current.Token);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
-
-        [Route("xxx"), HttpGet]
-        public UserSessionModel XXX() {
-
-            string x1 = _joberConfig.Application.Jober.Company.DefaultImageUrl;
-            bool x2 = _joberConfig.Application.Jober.SendRegistrationEmail;
-
-            _joberConfig.Application.Jober.SendRegistrationEmail = false;
-
-            return new UserSessionModel {
-                ID = 1,
-                Token = string.Format("{0:N}{1:N}", Guid.NewGuid(), Guid.NewGuid()),
-                Username = "username"
-            };
-        }
     }
 }
