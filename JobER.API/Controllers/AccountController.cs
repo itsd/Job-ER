@@ -56,5 +56,14 @@ namespace JobER.API.Controllers {
             _sessionService.Logout(JobErSession.Current.Token);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
+
+        [Route("xxx"), HttpPost]
+        public UserSessionModel XXX() {
+            return new UserSessionModel {
+                ID = 1,
+                Token = string.Format("{0:N}{1:N}", Guid.NewGuid(), Guid.NewGuid()),
+                Username = "username"
+            };
+        }
     }
 }
