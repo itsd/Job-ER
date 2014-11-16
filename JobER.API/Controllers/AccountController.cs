@@ -56,10 +56,5 @@ namespace JobER.API.Controllers {
             _sessionService.Logout(JobErSession.Current.Token);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
-
-        [Route("test"), HttpGet]
-        public void Test() {
-            string x = _joberConfig.Application.Company.Username;
-        }
     }
 }

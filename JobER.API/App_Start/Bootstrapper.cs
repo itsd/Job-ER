@@ -1,8 +1,8 @@
-﻿using System.Web.Mvc;
+using System.Web.Mvc;
 using Microsoft.Practices.Unity;
 using Unity.Mvc4;
 
-namespace Connected.API {
+namespace JobER.API {
     public static class Bootstrapper {
         public static IUnityContainer Initialise() {
             var container = BuildUnityContainer();
