@@ -43,21 +43,21 @@ namespace Home.Entity {
                 return results;
             }
         }
-
+        
         private IEnumerable<ValidationResult> GetValidationResults(DbEntityEntry entry, ValidationContext validationContext) {
             List<ValidationResult> results = new List<ValidationResult>();
             Validator.TryValidateObject(entry.Entity, validationContext, results, true);
             return results;
         }
 
-
         #region IUnitOfWork
 
         public void Commit() {
             this.SaveChanges();
         }
-
+        
         public void RollBack() {
+            //TODO: Implement RollBack Function
             throw new NotImplementedException();
         }
 

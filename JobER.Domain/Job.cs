@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace JobER.Domain {
     public class Job {
         public int ID { get; set; }
+        public Company Company { get; set; }
         public Category Category { get; set; }
     }
 }

@@ -8,6 +8,5 @@ namespace JobER.Domain.Interfaces.Repositories {
     public interface ICategoryRepository {
         Category Fetch(int id);
         IEnumerable<Category> GetCategories();
-
     }
 }

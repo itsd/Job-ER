@@ -31,6 +31,7 @@ namespace JobER.Domain {
         }private IIdentity _identity;
 
         public bool IsInRole(string role) {
+            //TODO: Implement IsInRole Method
             throw new NotImplementedException();
         }
     }
@@ -39,7 +40,7 @@ namespace JobER.Domain {
     public class JobErIdentity : IIdentity {
 
         public string AuthenticationType {
-            get { throw new NotImplementedException(); }
+            get { throw new NotImplementedException(); } //TODO: Implement AuthenticationType
         }
 
         public bool IsAuthenticated { get; internal set; }
