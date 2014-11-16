@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Entity", "Home.Entity\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobER.API", "JobER.API\JobER.API.csproj", "{7AAD943A-2868-43B8-BB51-7D7A36498BDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobER.Web", "JobER.Web\JobER.Web.csproj", "{773D3578-CE3A-43F0-A837-D1EB78D8BF31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{7AAD943A-2868-43B8-BB51-7D7A36498BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AAD943A-2868-43B8-BB51-7D7A36498BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AAD943A-2868-43B8-BB51-7D7A36498BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773D3578-CE3A-43F0-A837-D1EB78D8BF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773D3578-CE3A-43F0-A837-D1EB78D8BF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773D3578-CE3A-43F0-A837-D1EB78D8BF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773D3578-CE3A-43F0-A837-D1EB78D8BF31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
