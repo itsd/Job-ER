@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Serialization;
+﻿using JobER.API.Infrastructure;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace JobER.API {
             };
 
             config.MessageHandlers.Add(new CorsMessageHandler(config));
+            config.MessageHandlers.Add(new SessionHandler());
         }
     }
 }

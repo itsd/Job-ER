@@ -17,10 +17,7 @@ namespace JobER.Configuration {
 
         public ApplicationConfig Application {
             get {
-                if (application == null) {
-                    application = _provider.GetConfigurationSection<ApplicationConfig>("application");
-                }
-                return application;
+                return application ?? (application = _provider.GetConfigurationSection<ApplicationConfig>("application"));
             }
         }
     }

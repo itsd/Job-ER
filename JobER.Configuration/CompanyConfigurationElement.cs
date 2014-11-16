@@ -7,16 +7,10 @@ using System.Threading.Tasks;
 
 namespace JobER.Configuration {
     public class CompanyConfigurationElement : ConfigurationElement {
-        [ConfigurationProperty("username", IsKey = false, IsRequired = true)]
-        public string Username {
-            get { return (string)base["username"]; }
-            set { base["username"] = value; }
-        }
-
-        [ConfigurationProperty("password", IsKey = false, IsRequired = true)]
-        public string Password {
-            get { return (string)base["password"]; }
-            set { base["password"] = value; }
+        [ConfigurationProperty("defaultImageUrl", IsKey = false, IsRequired = true)]
+        public string DefaultImageUrl {
+            get { return (string)base["defaultImageUrl"]; }
+            set { base["defaultImageUrl"] = value; }
         }
     }
 }

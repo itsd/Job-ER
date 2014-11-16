@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JobER.Configuration {
+    [Serializable]
     public class ApplicationConfig : ConfigurationSection {
-        [ConfigurationProperty("company", IsRequired = false)]
-        public CompanyConfigurationElement Company {
-            get { return (CompanyConfigurationElement)base["company"]; }
-            set { base["company"] = value; }
+        [ConfigurationProperty("jober", IsRequired = false)]
+        public JobErConfigurationElement Jober {
+            get { return (JobErConfigurationElement)base["jober"]; }
+            set { base["jober"] = value; }
         }
     }
 }

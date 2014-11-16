@@ -43,6 +43,7 @@
     <Compile Include="ApplicationConfig.cs" />
     <Compile Include="CompanyConfigurationElement.cs" />
     <Compile Include="JobErConfig.cs" />
+    <Compile Include="JobErConfigurationElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
